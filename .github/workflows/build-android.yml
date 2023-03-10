@@ -70,6 +70,8 @@ jobs:
 
       - name: Build with Gradle
         run: cd opencamera && chmod 777 ./gradlew && ./gradlew --no-daemon assembleRelease
+        
+      - run: cd opencamera/app/build/outputs/apk && ls -R
       
       - name: Release prebuilt
         uses: ncipollo/release-action@v1
