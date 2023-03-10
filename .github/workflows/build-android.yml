@@ -69,14 +69,12 @@ jobs:
         uses: android-actions/setup-android@v2.0.10
 
       - name: Build with Gradle
-        run: cd opencamera && chmod 777 ./gradlew && ./gradlew --no-daemon assembleDebug
-        
-      - run: cd opencamera && ls -R
-
+        run: cd opencamera && chmod 777 ./gradlew && ./gradlew --no-daemon assembleRelease
+      
       - name: Release prebuilt
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "opencamera/app/opencamera/build/outputs/apk/debug/opencamera-debug.apk"
+          artifacts: "opencamera/app/build/outputs/apk/debug/app-release.apk"
           allowUpdates: true
           token: ${{ secrets.GITHUB_TOKEN }}
           
