@@ -9,14 +9,13 @@ on:
 jobs:
   build:
     name: Create Release
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     env:
       appName: opencamera
       tagName: v1.15
       targetZip: opencamera-${{ github.ref_name }}.zip
     steps:
       - name: git clone
-        shell: cmd
         run: git clone --recursive https://git.code.sf.net/p/opencamera/code opencamera && cd opencamera && git checkout "${{ env.tagName }}"
         
       - name: Cancel Previous Runs
