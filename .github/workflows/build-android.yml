@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       appName: opencamera
-      tagName: v1.15
+      tagName: v1.51.1
       targetZip: opencamera-${{ github.ref_name }}.zip
     steps:
       - name: git clone
