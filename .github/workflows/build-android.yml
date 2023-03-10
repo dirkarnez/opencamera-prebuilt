@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: git clone
         shell: cmd
-        run: git clone --recursive git clone https://git.code.sf.net/p/opencamera/code opencamera-code && cd opencamera-code && git checkout "${{ env.tagName }}"
+        run: git clone --recursive https://git.code.sf.net/p/opencamera/code opencamera && cd opencamera && git checkout "${{ env.tagName }}"
         
       - name: Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.9.0
