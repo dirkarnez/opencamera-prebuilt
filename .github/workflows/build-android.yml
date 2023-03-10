@@ -74,7 +74,7 @@ jobs:
       - name: Release prebuilt
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "opencamera/app/build/outputs/apk/debug/app-release.apk"
+          artifacts: "opencamera/app/build/outputs/apk/release/app-release.apk"
           allowUpdates: true
           token: ${{ secrets.GITHUB_TOKEN }}
           
